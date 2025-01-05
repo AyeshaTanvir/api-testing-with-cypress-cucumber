@@ -12,35 +12,45 @@ This project demonstrates how to use Cypress with Cucumber for API automation te
 
 ### Installation
 
-1. Install Cypress and Cucumber preprocessor plugin:
+1. Install nodemodules first before running the project with the following command
+`npm init -y`
+2. Install Cypress and Cucumber preprocessor plugin:
+
    ```bash
-   npm install --save-dev cypress cypress-cucumber-preprocessor
+   npm install --save-dev cypress
+   npm install --save-dev cypress-cucumber-preprocessor
+   ```
 
-2. Add the Cucumber preprocessor to your Cypress plugins:
+
+3. Add the Cucumber preprocessor to your Cypress plugins:
 **cypress/plugins/index.js**
-> const cucumber = require('cypress-cucumber-preprocessor').default;
 
-module.exports = (on, config) => {
-  on('file:preprocessor', cucumber());
-};
+  ```const cucumber = require('cypress-cucumber-preprocessor').default;
 
- 3. Configure the plugin using cosmiconfig. Add the following section to your
+  module.exports = (on, config) => {
+    on('file:preprocessor', cucumber());
+  };
+```
+
+4. Configure the plugin using cosmiconfig. Add the following section to your
  {} package.json:
  ```{
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   }
-}```
+}
+```
 
 ### Plugin Installation
 
 1. Install the following VS Code plugins:
 > Cucumber (Gherkin) Full Support
+
 > Cucumber Step Definition Generator
 
 ## Running Tests
 
-1. To run the tests in the command line:
+1. To run the tests in the command line in headless mode:
 > npx cypress run
 2. To open Cypress and run tests in a specific browser:
  >npx cypress open
@@ -51,6 +61,4 @@ After writing the step definitions and feature files and running them successful
 
 1. Go to Cucumber Features and Cucumber Glue in your VS Code settings to configure synchronization.
 
-* *This code is written by Syeda Ayesha Tanvir.* *
-* *© 2025 Syeda Ayesha Tanvir. All rights reserved.* *
 
