@@ -5,19 +5,17 @@ This project demonstrates how to use Cypress with Cucumber for API automation te
 ## Project Structure
 
 - **Feature Files**: Located in the `cypress/e2e/cucumber/feature` folder.
-- **Step Definitions**: Located in the `cypress/stepDefinitions` folder.
+- **Step Definitions**: Located in the `cypress/stepDefinitions` folder with same folder name as feature file of the testcase to synchronise step definition file.
 - **Test Data**: Located in the `cypress/fixtures/apiData.json` file.
 
 ## Prerequisites
 
 ### Installation
 
-1. Install nodemodules first before running the project with the following command
-`npm init -y`
-2. Install Cypress and Cucumber preprocessor plugin:
+1. Install Cypress and Cucumber preprocessor plugin:
 
    ```bash
-   npm install --save-dev cypress
+   npm install cypress@13.6.0
    npm install --save-dev cypress-cucumber-preprocessor
    ```
 
@@ -55,10 +53,5 @@ This project demonstrates how to use Cypress with Cucumber for API automation te
 2. To open Cypress and run tests in a specific browser:
  >npx cypress open
 
-## Synchronizing Step Definitions and Feature Files
-
-After writing the step definitions and feature files and running them successfully, you can edit the configuration to synchronize step definitions and feature files.
-
-1. Go to Cucumber Features and Cucumber Glue in your VS Code settings to configure synchronization.
 
 
